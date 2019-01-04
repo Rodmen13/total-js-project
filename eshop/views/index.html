@@ -1,0 +1,23 @@
+<div id="company" style="width:200px;background-color: #ff6a00">Below is a list of all products</div>
+
+	<div>Products:</div>
+	<hr/>
+	<div id="products">
+	@{foreach m in model}
+	<form action="/" method="POST">
+	<input type="hidden" name="id" value="@{m.id}"/>
+	<div>Name:&nbsp;&nbsp;<input type="text" name="name" value="@{m.name}"/>&nbsp;&nbsp;Price:&nbsp;&nbsp;<input type="text" name="price" value="@{m.price}"/>
+	&nbsp;&nbsp;<button>Modify</button></div>
+	</form>
+	<hr />
+	@{end}
+	</div>
+	<form action="/" method="POST">
+		<input type="hidden" name="id" value=""/>
+		<input type="hidden" name="name" value=""/>
+		<input type="hidden" name="price" value="0"/>
+		<button name="Add">Add Product</button>
+	</form>
+	
+
+	
