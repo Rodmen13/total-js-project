@@ -1,0 +1,3 @@
+// identificator : NAME  --> URL --> PARENT (optional)
+homepage         : Homepage       --> /
+products         : Products        --> /products         --> homepage

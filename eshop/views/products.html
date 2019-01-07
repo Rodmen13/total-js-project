@@ -1,0 +1,25 @@
+@{sitemap('products')}
+
+<h1>@{title}</h1>
+
+<div style="font-size:18px; width:80%;">Below is a list of all products</div>
+<hr/>
+<table width="100%" class="table"  cellpadding="0" cellspacing="0" border="0px">
+		<colgroup>
+			<col style="width:20%" />
+			<col style="width:20%" />
+			<col style="width:60%" />
+		</colgroup>
+		<tr>
+			<td><h3>Name</h3></td>
+			<td><h3>Price</h3></td>
+			<td><h3>Details</h3></td>
+		</tr>
+		@{foreach var m in model}
+		<tr>
+			<td>@{m.name}</td>
+			<td>@{m.price}</td>
+			<td><a href="">Details</a></td>
+		</tr>
+		@{end}
+</table>
